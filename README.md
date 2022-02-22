@@ -25,9 +25,9 @@ import "github.com/gobkc/sqlx"
 func main() {
     db := sqlx.NewPg("postgres1", "password1", "localhost:5566", "testDb", "disable")
     err := db.Table("app").Where("id=?", 62).Update(&map[string]interface{}{"name":"123"})
-	if err != nil {
-		fmt.Println(err)
-	}
+    if err != nil {
+        fmt.Println(err)
+    }
 }
 ````
 Please refer to [pgsql_test.go](https://github.com/gobkc/sqlx/blob/main/pgsql_test.go) document for more example
